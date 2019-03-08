@@ -15,7 +15,7 @@ module ROM
     #
     #   class Posts < ROM::Relation[:elasticsearch]
     #     schema(:posts) do
-    #       attribute :id, Types::Int
+    #       attribute :id, Types::Integer
     #       attribute :title, Types::String
     #
     #       primary_key :id

@@ -9,7 +9,7 @@ RSpec.describe ROM::Elasticsearch::Relation, '#dataset' do
     before do
       conf.relation(:users) do
         schema do
-          attribute :id, ROM::Types::Int
+          attribute :id, ROM::Types::Integer
           attribute :name, ROM::Types::String
         end
       end
@@ -34,7 +34,7 @@ RSpec.describe ROM::Elasticsearch::Relation, '#dataset' do
         end
 
         schema do
-          attribute :id, ROM::Types::Int
+          attribute :id, ROM::Types::Integer
           attribute :name, ROM::Types::String
           attribute :_metadata, ROM::Types::Hash,
                     read: ROM::Types::Hash.symbolized(_index: 'string')
