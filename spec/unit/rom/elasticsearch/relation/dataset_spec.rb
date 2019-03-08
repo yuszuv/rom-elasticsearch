@@ -43,6 +43,7 @@ RSpec.describe ROM::Elasticsearch::Relation, '#dataset' do
 
       users.create_index
       users.command(:create).call(id: 1, name: 'Jane')
+      users.refresh
     end
 
     it 'uses customized dataset' do
