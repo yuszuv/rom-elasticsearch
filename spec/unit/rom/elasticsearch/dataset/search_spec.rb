@@ -15,6 +15,6 @@ RSpec.describe ROM::Elasticsearch::Dataset, '#search' do
 
   it 'returns data matching query options' do
     expect(dataset.search(query: {query_string: {query: 'username:eve'}}).to_a).
-      to eql([{'username' => 'eve'}])
+      to eql([{username: 'eve'}])
   end
 end
